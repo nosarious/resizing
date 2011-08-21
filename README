@@ -1,0 +1,8 @@
+Resizing.js is a javascript system for resizing the page when the browser window if modified, or orientation changes on a mobile device.
+
+it is part of the publishing engine I have been developing for the past while.
+
+When used with jscroll-slide it can help handle orientation changes while moving through a one-page web site.
+
+Gerry Straathof.
+nosemonger@gmail.com
