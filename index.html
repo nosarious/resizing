@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- <html manifest="manifest.php"> -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="height=device-height,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+  
+    <title>basic orientation change and resize script</title> 
+    
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>         
+    <script type="text/javascript" src="resizing.js" ></script>
+	<STYLE type="text/css">
+	*{
+		margin:0px;
+		padding:0px;
+	}
+	fullPage {
+		position:relative;
+		-webkit-transition:all 2s ease-in-out;
+		}
+    body {
+        background-color:red;
+		position:absolute; 
+		top:0px; 
+		left:0px;
+        margin: 0px 0px 0px 0px;  
+        overflow:hidden;
+        }
+	.filler {
+		background:blue; 
+		text-align: center
+		}
+	.fillerSmall {
+		background:red; 
+		text-align: center
+		}
+	.article-content{
+        width:300px;
+        position:absolute;
+        top:0px; 
+		background:white; 
+		text-alignment:justified;
+		z-index:5;
+        }
+	</STYLE>
+	<script>
+		jQuery.event.add(window, "orientationchange", updateOrientation);
+		jQuery.event.add(window, "load", updateOrientation);
+		jQuery.event.add(window, "resize", updateOrientation);
+	</script>
+</head>
+<body>
+    <div id="wrapper_all"> 
+		<div id="issue-container"> 
+			<div id = "article1" class="fullPage" > 
+				<div class="backdrop "><img src="test1.jpg"  alt="random image of random junk"></div>
+				<div class="article-content">
+					<div class="filler">large filler is 25% of screen</div>
+					This is some test text for the purpose of this example<br>
+					This is some test text for the purpose of this example<br>
+					This is some test text for the purpose of this example<br>
+					This is some test text for the purpose of this example
+					<div class="fillerSmall">small filler is 10% of screen</div>
+					This is some test text for the purpose of this example<br>
+					This is some test text for the purpose of this example<br>
+					This is some test text for the purpose of this example<br>
+					This is some test text for the purpose of this example
+					<div class="fillerSmall">large filler is 25% of screen</div>
+			</div>
+		</div> 
+	</div> 
+</body>
+            
+</html>
